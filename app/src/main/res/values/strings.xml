@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Travel Companion</string>
+    <string name="welcome_to_travel_companion">Welcome to Travel Companion</string>
+    <string name="start">Start</string>
+    <string name="your_trips">Your Trips</string>
+    <string name="create_new_trip">Create New Trip</string>
+    <string name="start_planning">Start Planning</string>
+    <string name="app_logo" />
+    <string name="save_trip">Save Trip</string>
+    <string name="end_date">End Date</string>
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- Header Image with Back Button -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <!-- Paris Image -->
+            <ImageView
+                android:id="@+id/iv_paris_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/paris_image"
+                android:scaleType="centerCrop"
+                android:contentDescription="Paris Image" />
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|top"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="Back Button"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </FrameLayout>
+
+        <!-- Trip Name and Details -->
+        <TextView
+            android:id="@+id/tv_trip_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip to Paris"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_destination_and_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destination: Paris\nDates: June 5, 2024 - June 10, 2024"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center" />
+
+        <!-- Attendees Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendees"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/attendees_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/attendee1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/profile_pic_1"
+                android:contentDescription="Attendee 1"
+                app:shapeAppearanceOverlay="@style/CircularImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/attendee2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/profile_pic_2"
+                android:contentDescription="Attendee 2"
+                app:shapeAppearanceOverlay="@style/CircularImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/attendee3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profile_pic_3"
+                android:contentDescription="Attendee 3"
+                app:shapeAppearanceOverlay="@style/CircularImage" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Itinerary Details Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Itinerary Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Day-wise Itinerary Cards -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_day_1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Day 1: Arrival in Paris"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_1_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Morning: Arrival at Charles de Gaulle Airport, transfer to hotel."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_1_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Afternoon: Explore Montmartre, visit Sacré-Cœur Basilica."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_1_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Evening: Dinner at a Parisian bistro."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+                <!-- Day 2 -->
+                <TextView
+                    android:id="@+id/tv_day_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Day 2: Iconic Paris Landmarks"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_2_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Morning: Guided tour of the Eiffel Tower, including the summit."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_2_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Afternoon: Lunch at a café with Eiffel Tower views."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_2_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Evening: Seine River Cruise. Admire illuminated landmarks and enjoy a scenic dinner."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"/>
+
+                <!-- Day 3 -->
+                <TextView
+                    android:id="@+id/tv_day_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Day 3: Cultural Immersion and Departure"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_3_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Morning: Visit Notre-Dame Cathedral and explore Île de la Cité."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_3_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Afternoon: Free time for shopping at Champs-Élysées or visiting the Musée d'Orsay."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tv_day_3_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Evening: Transfer to the airport for return flight or enjoy a farewell meal."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Repeat the same structure for other days -->
+
+    </LinearLayout>
+</ScrollView>
